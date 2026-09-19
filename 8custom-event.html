@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        height: 300px;
+        width: 500px;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        height: 40px;
+        width: 60px;
+        border: 2px solid black;
+        border-radius: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <button class="btn">start</button>
+    </div>
+
+    <script>
+      const startProcess = new Event("startProcess");
+
+      document.addEventListener("startProcess", () => {
+        console.log(`custom event is triggered.`);
+        alert("process started");
+      });
+
+      const startButton = document.querySelector(".btn");
+      startButton.addEventListener("click", () => {
+        console.log(`Button Clicked. Starting custom event...`);
+        document.dispatchEvent(startProcess);
+      });
+    </script>
+  </body>
+</html>
