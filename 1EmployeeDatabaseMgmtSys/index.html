@@ -4,6 +4,59 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="app">
+      <header class="header">
+        <h1>Employee Database Management</h1>
+        <button class="createEmployee">Add Employee</button>
+      </header>
+
+      <div class="employees">
+        <div class="employeesNames">
+          <span class="employeesNamesTitle">Employee List</span>
+          <div class="employeesNamesList"></div>
+        </div>
+
+        <div class="employeesSingle">
+          <div class="employeesSingleTitle">Employee Information</div>
+          <div class="employeesSingleInfo"></div>
+        </div>
+      </div>
+
+      <div class="addEmployee">
+        <form action="" class="createEmployee">
+          Add a new Employee
+          <div>
+            <input
+              type="text"
+              name="firstName"
+              placeholder="first name"
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="last name"
+              required
+            />
+          </div>
+
+          <input type="text" name="imageUrl" placeholder="image url" />
+          <input type="email" name="email" placeholder="Emain" required />
+          <input type="number" name="contactNumber" placeholder="Contact" />
+          <input type="number" name="salary" placeholder="salary" required />
+          <input type="text" name="address" placeholder="Address" required />
+          <input
+            type="date"
+            name="dob"
+            placeholder="data of birth"
+            class="addEmployeeCreateDob"
+            required
+          />
+          <input type="submit" class="addEmployeeCreateSubmit" value="submit" />
+        </form>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
